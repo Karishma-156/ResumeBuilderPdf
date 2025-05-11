@@ -21,17 +21,35 @@ A simple and responsive Resume Builder application built using **HTML**, **CSS**
 
 ## 📂 File Structure
 
+```
 resume-builder/
 │
-├── index.html # Main HTML file
-├── style.css # Styling
-├── script.js # Core functionality
-└── README.md # Project documentation
+├── index.html     # Main HTML file
+├── style.css      # Styling
+├── script.js      # Core functionality
+├── INPUT_DETAILS.png
+├── SECOND_STEP.png
+├── THIRD_STEP.png
+├── PDF_GENERATOR.png
+└── README.md      # Project documentation
+```
 
 
-## 📷 Screenshots
 
-*(Add screenshots here if available)*
+## 📸 Screenshots
+
+### 1. Input Details
+![Input Details](INPUT_DETAILS.png)
+
+### 2. Step Two
+![Second Step](SECOND_STEP.png)
+
+### 3. Step Three
+![Third Step](THIRD_STEP.png)
+
+### 4. PDF Generator
+![PDF Generator](PDF_GENERATOR.png)
+
 
 ## 💡 How to Use
 
