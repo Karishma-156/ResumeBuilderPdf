@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- FORM CONTAINER -->
+    <div id="formContainer">
+      <h1>Resume Builder</h1>
+      <h2>Enter Details</h2>
+      <form id="resumeForm">
+
+        <div class="field-group">
+          <input type="text" id="name" placeholder="Full Name" required />
+          <button type="button" onclick="clearField('name')">Reset</button>
+          <div class="error" id="nameError"></div>
+        </div>
+
+        <div class="field-group">
+          <input type="email" id="email" placeholder="Email Address" required />
+          <button type="button" onclick="clearField('email')">Reset</button>
+          <div class="error" id="emailError"></div>
+        </div>
+
+        <div class="field-group">
+          <input type="tel" id="phone" placeholder="Phone Number" required />
+          <button type="button" onclick="clearField('phone')">Reset</button>
+          <div class="error" id="phoneError"></div>
+        </div>
+
+        <div class="field-group">
+          <textarea id="education" placeholder="Education" required ></textarea>
+          <button type="button" onclick="clearField('education')">Reset</button>
+          <div class="error" id="educationError"></div>
+        </div>
+
+        <div class="field-group">
+          <textarea id="skills" placeholder="Skills" required ></textarea>
+          <button type="button" onclick="clearField('skills')">Reset</button>
+          <div class="error" id="skillsError"></div>
+        </div>
+
+        <div class="field-group">
+          <textarea id="summary" placeholder="Career Objective / Summary" required></textarea>
+          <button type="button" onclick="clearField('summary')">Reset</button>
+          <div class="error" id="summaryError"></div>
+        </div>
+
+        <div class="field-group">
+          <label for="experience">Select Experience:</label>
+          <select id="experience" required>
+            <option value="">--Select--</option>
+            <option value="Fresher">Fresher</option>
+            <option value="1-2 years">1–2 years</option>
+            <option value="3-5 years">3–5 years</option>
+            <option value="5+ years">5+ years</option>
+          </select>
+          <button type="button" onclick="clearField('experience')">Reset</button>
+          <div class="error" id="experienceError"></div>
+        </div>
+
+        <div class="field-group">
+          <textarea id="extra" placeholder="Projects / Achievements (optional)"></textarea>
+          <button type="button" onclick="clearField('extra')">Reset</button>
+        </div>
+
+        <div class="field-group">
+          <label for="photo">Upload Photo (jpg/jpeg/pdf, max 1MB):</label>
+          <input type="file" id="photo" accept=".jpg, .jpeg, .pdf" required />
+          <button type="button" onclick="clearField('photo')">Reset</button>
+          <div class="error" id="photoError"></div>
+        </div>
+        
+
+        <div class="button-group">
+          <button type="button" onclick="generateResume()">Generate Resume</button>
+          <button type="button" class="clear-all" onclick="clearAll()">Clear All</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- PREVIEW CONTAINER -->
+    <div id="previewContainer" style="display: none;">
+      <h2>Resume Preview</h2>
+      <div id="resumeContent" class="resume-layout">
+        <h1 id="previewName">Name</h1>
+        <div class="header-section">
+          <div class="left">
+            <h3>Your Designation</h3>
+            <p id="previewSummary">Career Objective or Summary</p>
+            <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="previewPhone"></span></p>
+          </div>
+          <div class="right">
+            <img id="photoPreview" src="" alt="Uploaded Photo" />
+          </div>
+        </div>
+        <div class="section">
+          <h2>Education</h2>
+          <p id="previewEducation"></p>
+        </div>
+      
+        <div class="section">
+          <h2>Skills</h2>
+          <p id="previewSkills"></p>
+        </div>
+      
+        <div class="section">
+          <h2>Experience</h2>
+          <p id="previewExperience"></p>
+        </div>
+      
+        <div class="section">
+          <h2>Projects / Achievements</h2>
+          <p id="previewExtra"></p>
+        </div>
+      </div>
+      <div class="button-group">
+        <button onclick="editResume()">Edit</button>
+        <button onclick="confirmResume()">Confirm</button>
+      </div>
+    </div>
+
+    <!-- FINAL RESUME CONTAINER -->
+    <div id="finalResumeContainer" style="display: none;">
+      <h2>Final Resume</h2>
+      <div id="finalResumeContent">
+        <!-- Will be filled dynamically -->
+      </div>
+      <button onclick="downloadPDF()">Download as PDF</button>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>  
