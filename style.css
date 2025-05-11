@@ -1,0 +1,195 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 95vh;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+select {
+  margin-right: 0;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-right: 10px;
+}
+
+.field-group button {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  background: #ccc;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1 1 100px;
+  min-width: 100px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.clear-all {
+  background-color: #dc3545;
+}
+
+.clear-all:hover {
+  background-color: #a71d2a;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.resume-layout {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+}
+
+#previewName {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #1c4e80;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+.header-section .left {
+  justify-content: flex-start;
+}
+
+.header-section .left h3 {
+  font-size: 16px;
+  margin: 5px 0 15px;
+}
+
+.header-section .right {
+  text-align: right;
+}
+
+.header-section .right img {
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  margin-right: 10px;
+}
+
+img#photoPreview {
+  display: inline-block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 120px;
+  height: 120px;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.section h2 {
+  background-color: #1c4e80;
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  input, textarea, select {
+    font-size: 15px;
+  }
+
+  button {
+    flex: 1 1 48%;
+    min-width: 45%;
+  }
+
+  .header-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-section .right img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
